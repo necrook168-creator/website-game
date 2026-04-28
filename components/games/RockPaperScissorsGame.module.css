@@ -1,0 +1,52 @@
+.panel {
+  margin-top: 18px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.choice {
+  display: grid;
+  place-items: center;
+  gap: 8px;
+  min-height: 104px;
+  color: var(--ink);
+  text-align: center;
+  background: linear-gradient(160deg, #ffffff, #ffe8cf);
+  box-shadow: 0 12px 18px rgba(20, 33, 61, 0.12);
+}
+
+.choice span {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.board {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(20, 33, 61, 0.05);
+}
+
+.result {
+  min-height: 24px;
+  font-weight: 700;
+}
+
+.score {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+@media (max-width: 560px) {
+  .buttons {
+    grid-template-columns: 1fr;
+  }
+}

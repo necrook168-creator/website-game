@@ -1,0 +1,70 @@
+.head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.metrics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.memoryCard {
+  position: relative;
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border: 1px solid rgba(20, 33, 61, 0.14);
+  border-radius: 18px;
+  background: linear-gradient(160deg, #ffffff, #ffe0b5);
+  color: var(--ink);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  box-shadow: 0 12px 18px rgba(20, 33, 61, 0.12);
+  cursor: pointer;
+}
+
+.memoryCard::before {
+  content: "?";
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #14213d, #274c77);
+  color: #fff;
+  transition: opacity 0.2s ease;
+}
+
+.revealed::before,
+.matched::before {
+  opacity: 0;
+}
+
+.matched {
+  background: linear-gradient(135deg, #b7f7df, #f0ffad);
+}
+
+.completion {
+  margin-top: 16px;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: rgba(6, 214, 160, 0.15);
+  font-weight: 700;
+}
+
+@media (max-width: 560px) {
+  .grid {
+    gap: 10px;
+  }
+}

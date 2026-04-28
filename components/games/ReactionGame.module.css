@@ -1,0 +1,37 @@
+.pad {
+  display: grid;
+  place-items: center;
+  height: 220px;
+  margin-top: 20px;
+  padding: 20px;
+  border: 2px dashed rgba(20, 33, 61, 0.18);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.58);
+  text-align: center;
+  user-select: none;
+  transition: background 0.18s ease, transform 0.18s ease;
+}
+
+.pad strong {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+.ready {
+  border-style: solid;
+  background: linear-gradient(135deg, rgba(6, 214, 160, 0.88), rgba(130, 255, 208, 0.94));
+  transform: scale(1.01);
+}
+
+.tooSoon {
+  border-style: solid;
+  background: linear-gradient(135deg, rgba(239, 71, 111, 0.86), rgba(255, 138, 138, 0.95));
+  color: #fff;
+}
+
+@media (max-width: 560px) {
+  .pad {
+    height: 190px;
+  }
+}

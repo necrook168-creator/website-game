@@ -1,0 +1,76 @@
+.card {
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+
+.card h2 {
+  margin: 0 0 10px;
+  font-size: 1.7rem;
+}
+
+.copy {
+  margin: 0;
+  color: rgba(20, 33, 61, 0.82);
+  line-height: 1.6;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  min-height: 54px;
+  margin-top: 18px;
+  padding: 14px 16px;
+  border-radius: 16px;
+  background: rgba(20, 33, 61, 0.06);
+  font-weight: 700;
+}
+
+.buttonRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.button {
+  cursor: pointer;
+  padding: 13px 18px;
+  border-radius: 14px;
+  color: #fff;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent), #ff6b6b);
+  box-shadow: 0 12px 22px rgba(239, 71, 111, 0.28);
+  transition: transform 0.16s ease, box-shadow 0.16s ease, opacity 0.16s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.secondary {
+  background: linear-gradient(135deg, var(--accent-2), #ffbf69);
+  box-shadow: 0 12px 22px rgba(255, 159, 28, 0.28);
+}
+
+.pill {
+  min-width: 104px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  background: rgba(20, 33, 61, 0.08);
+  text-align: center;
+  font-weight: 700;
+}
+
+@media (max-width: 560px) {
+  .card {
+    padding: 18px;
+  }
+}
