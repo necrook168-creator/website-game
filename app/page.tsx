@@ -75,8 +75,8 @@ export default function HomePage() {
             <span>应用框架</span>
           </div>
           <div className={styles.stat}>
-            <strong>1</strong>
-            <span>个首页体验</span>
+            <strong>14:30</strong>
+            <span>预约时间</span>
           </div>
         </div>
       </section>
