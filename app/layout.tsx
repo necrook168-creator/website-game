@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Arcade Quartet",
+  title: "Arcade Sextet",
   description: "一个打开就能玩的单页面小游戏网站。"
 };
 

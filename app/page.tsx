@@ -2,8 +2,10 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import { GuessNumberGame } from "@/components/games/GuessNumberGame";
 import { MemoryMatchGame } from "@/components/games/MemoryMatchGame";
+import { QuickMathGame } from "@/components/games/QuickMathGame";
 import { ReactionGame } from "@/components/games/ReactionGame";
 import { RockPaperScissorsGame } from "@/components/games/RockPaperScissorsGame";
+import { TicTacToeGame } from "@/components/games/TicTacToeGame";
 
 const photos = [
   {
@@ -47,10 +49,10 @@ export default function HomePage() {
         <div className={styles.heroIntro}>
           <div className={styles.heroCopy}>
             <span className={styles.eyebrow}>Playful Digital Atelier</span>
-            <h1>Arcade Quartet</h1>
+            <h1>Arcade Sextet</h1>
             <p>
               像走进一间带霓虹余温的小型互动工作室。这里不是一张普通的游戏目录，而是一组节奏各异的微型表演:
-              反应、记忆、判断和一点点运气，轮流上场，把页面变成可以直接参与的轻盈展览。
+              反应、记忆、判断、心算、棋盘博弈和一点点运气，轮流上场，把页面变成可以直接参与的轻盈展览。
             </p>
           </div>
           <figure className={styles.heroPortrait}>
@@ -67,7 +69,7 @@ export default function HomePage() {
         </div>
         <div className={styles.heroStats}>
           <div className={styles.stat}>
-            <strong>4</strong>
+            <strong>6</strong>
             <span>内置小游戏</span>
           </div>
           <div className={styles.stat}>
@@ -109,6 +111,8 @@ export default function HomePage() {
         <MemoryMatchGame />
         <GuessNumberGame />
         <RockPaperScissorsGame />
+        <TicTacToeGame />
+        <QuickMathGame />
       </section>
 
       <section className={styles.infoSection} aria-labelledby="companyInfoTitle">
