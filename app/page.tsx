@@ -88,7 +88,7 @@ export default function HomePage() {
           孩子游戏时刻
         </h2>
         <p className={styles.sectionCopy}>
-          补上一组 4 张孩子在玩游戏的现场图片，让页面更有活力，也更贴合这个小游戏网站的主题。
+          选了四组更贴近真实游玩状态的照片，把街机、桌游、户外互动和专注单人体验都放进来，让首页气氛更完整。
         </p>
         <div className={styles.photoGrid}>
           {photos.map((photo) => (
@@ -120,7 +120,7 @@ export default function HomePage() {
           公司资料
         </h2>
         <p className={styles.sectionCopy}>
-          这里先放一版完整的公司信息展示，适合做网站底部介绍。如果你后面给我真实资料，我也可以直接替换成正式内容。
+          这部分用于承接品牌介绍与商务联系信息，保留了完整字段，适合直接作为网站底部的信息区使用。
         </p>
         <div className={styles.companyGrid}>
           {companyInfo.map(([label, value]) => (
@@ -132,9 +132,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <div className={styles.footerNote}>
-        现在改成了 Next.js 项目，使用开发服务器和构建命令运行。
-      </div>
+      <div className={styles.footerNote}>Arcade Sextet 以轻巧、明快的互动体验，为亲子与儿童场景提供网页游戏灵感。</div>
     </main>
   );
 }

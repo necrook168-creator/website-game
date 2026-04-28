@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import cardStyles from "./GameCard.module.css";
 import styles from "./QuickMathGame.module.css";
 
@@ -32,11 +32,21 @@ function getAnswer(challenge: Challenge) {
     : challenge.left - challenge.right;
 }
 
+const initialChallenge: Challenge = {
+  left: 8,
+  right: 6,
+  operator: "+"
+};
+
 export function QuickMathGame() {
-  const [challenge, setChallenge] = useState<Challenge>(() => createChallenge());
+  const [challenge, setChallenge] = useState<Challenge>(initialChallenge);
   const [answer, setAnswer] = useState("");
   const [score, setScore] = useState({ correct: 0, streak: 0 });
   const [status, setStatus] = useState("输入答案，看看你能不能把连对数叠起来。");
+
+  useEffect(() => {
+    setChallenge(createChallenge());
+  }, []);
 
   const submitAnswer = () => {
     const value = Number(answer);
