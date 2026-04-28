@@ -1,0 +1,43 @@
+.panel {
+  margin-top: 18px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.prompt {
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: rgba(20, 33, 61, 0.05);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.input {
+  min-width: 0;
+  flex: 1 1 180px;
+  padding: 13px 14px;
+  border: 1px solid rgba(20, 33, 61, 0.14);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--ink);
+}
+
+.board {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(20, 33, 61, 0.05);
+}
+
+.score {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}

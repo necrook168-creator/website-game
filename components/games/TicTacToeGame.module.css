@@ -1,0 +1,42 @@
+.panel {
+  margin-top: 18px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.cell {
+  min-height: 96px;
+  border: 1px solid rgba(20, 33, 61, 0.14);
+  border-radius: 18px;
+  color: var(--ink);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  background: linear-gradient(160deg, #ffffff, #ffe8cf);
+  box-shadow: 0 12px 18px rgba(20, 33, 61, 0.12);
+  cursor: pointer;
+}
+
+.board {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(20, 33, 61, 0.05);
+}
+
+.result {
+  min-height: 24px;
+  font-weight: 700;
+}
+
+.score {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
