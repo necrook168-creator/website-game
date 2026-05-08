@@ -1,0 +1,219 @@
+.card {
+  border-color: rgba(163, 21, 26, 0.22);
+  background:
+    radial-gradient(circle at top right, rgba(255, 206, 74, 0.38), transparent 32%),
+    radial-gradient(circle at bottom left, rgba(198, 40, 40, 0.14), transparent 34%),
+    linear-gradient(160deg, rgba(255, 248, 232, 0.96), rgba(255, 236, 206, 0.92));
+}
+
+.header {
+  display: grid;
+  gap: 8px;
+}
+
+.kicker {
+  display: inline-flex;
+  width: fit-content;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: #c62828;
+  color: #fff8df;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.arena {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.fighterCard {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  min-height: 220px;
+  padding: 18px 14px;
+  border: 1px solid rgba(163, 21, 26, 0.14);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.75);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.enemyCard {
+  background: rgba(255, 246, 223, 0.86);
+}
+
+.fighterCard::after {
+  content: "";
+  position: absolute;
+  inset: auto -20px -26px auto;
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(198, 40, 40, 0.18), transparent 72%);
+  pointer-events: none;
+}
+
+.sideTag {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(198, 40, 40, 0.1);
+  color: #941b1f;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 108px;
+  height: 108px;
+  border-radius: 34px;
+  background:
+    radial-gradient(circle at 35% 25%, rgba(255, 255, 255, 0.88), transparent 30%),
+    linear-gradient(180deg, #ffd95e, #ffb300);
+  font-size: 4rem;
+  box-shadow:
+    inset 0 -8px 16px rgba(163, 21, 26, 0.12),
+    0 14px 24px rgba(163, 21, 26, 0.14);
+  transform: rotate(-4deg);
+}
+
+.fighterCard strong {
+  font-size: 1.12rem;
+}
+
+.battleCry {
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(198, 40, 40, 0.1);
+  color: #a3151a;
+  font-size: 0.82rem;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.fighterCard span:last-child {
+  color: rgba(72, 35, 18, 0.78);
+  line-height: 1.55;
+}
+
+.versus {
+  display: grid;
+  place-items: center;
+  align-self: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #c62828;
+  color: #fff4d2;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  box-shadow: 0 12px 24px rgba(198, 40, 40, 0.24);
+}
+
+.choiceGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.choice {
+  cursor: pointer;
+  display: grid;
+  justify-items: center;
+  gap: 6px;
+  padding: 16px 12px;
+  border: 1px solid rgba(163, 21, 26, 0.14);
+  border-radius: 18px;
+  color: #482312;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(255, 241, 211, 0.92));
+  box-shadow: 0 10px 18px rgba(72, 35, 18, 0.08);
+  transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
+}
+
+.choice:hover {
+  transform: translateY(-2px);
+  border-color: rgba(198, 40, 40, 0.38);
+  box-shadow: 0 14px 24px rgba(198, 40, 40, 0.16);
+}
+
+.choiceIcon {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.choiceCry {
+  color: #b1272f;
+  font-size: 0.82rem;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.status {
+  margin-top: 18px;
+  background: rgba(198, 40, 40, 0.08);
+  color: #6e1618;
+}
+
+.scoreboard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.scorePill {
+  min-width: 112px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+  color: #7a2023;
+  text-align: center;
+  font-weight: 800;
+}
+
+.resetButton {
+  background: linear-gradient(135deg, #c62828, #f57c00);
+  box-shadow: 0 12px 22px rgba(198, 40, 40, 0.24);
+}
+
+@keyframes floatBounce {
+  0%,
+  100% {
+    transform: rotate(-4deg) translateY(0);
+  }
+
+  50% {
+    transform: rotate(-2deg) translateY(-5px);
+  }
+}
+
+.fighterCard .avatar {
+  animation: floatBounce 2.6s ease-in-out infinite;
+}
+
+@media (max-width: 760px) {
+  .arena {
+    grid-template-columns: 1fr;
+  }
+
+  .versus {
+    justify-self: center;
+  }
+}
+
+@media (max-width: 560px) {
+  .choiceGrid {
+    grid-template-columns: 1fr;
+  }
+}
