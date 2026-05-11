@@ -2,6 +2,7 @@ import styles from "./page.module.css";
 import { GuessNumberGame } from "@/components/games/GuessNumberGame";
 import { McdonaldsBattleGame } from "@/components/games/McdonaldsBattleGame";
 import { MemoryMatchGame } from "@/components/games/MemoryMatchGame";
+import { ArcadePetAssistant } from "@/components/pet/ArcadePetAssistant";
 import { QuickMathGame } from "@/components/games/QuickMathGame";
 import { ReactionGame } from "@/components/games/ReactionGame";
 import { RockPaperScissorsGame } from "@/components/games/RockPaperScissorsGame";
@@ -62,7 +63,7 @@ export default function HomePage() {
           公司资料
         </h2>
         <p className={styles.sectionCopy}>
-          这部分用于承接品牌介绍与商务联系信息，保留了完整字段，适合直接作为网站底部的信息区使用。
+          如果你想进一步了解品牌背景或预约合作，可以直接看这里。公司介绍、联系方法和服务时间都已经整理好，适合直接给家长、合作方或活动主办方查看。
         </p>
         <div className={styles.companyGrid}>
           {companyInfo.map(([label, value]) => (
@@ -75,6 +76,7 @@ export default function HomePage() {
       </section>
 
       <div className={styles.footerNote}>Arcade Sextet 以轻巧、明快的互动体验，为亲子与儿童场景提供网页游戏灵感。</div>
+      <ArcadePetAssistant />
     </main>
   );
 }
